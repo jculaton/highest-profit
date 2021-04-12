@@ -21,3 +21,5 @@ I checked data.csv to see what kinds of values the profit column had. I found 3 
 After writing all of the valid data rows into data2.json, I sorted the list in descending order and printed the top 20 rows using a while loop. 
 
 To verify my output values were correct, I used Excel to find the total number of data rows and used command + find to get the frequency of N.A. in the profit column. Then I subtracted the total rows - N.A. frequency and compared with my code output. 
+
+After recieving feedback on incorrect output, I immediately knew the problem was with the Part 2 deliverable (printing top 20 profit values). I was accessing the correct column value, but it was sorted by string value. Solution was to typecase it to float and bug was fixed.
