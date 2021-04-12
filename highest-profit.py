@@ -27,9 +27,10 @@ with open('data.csv','r') as data: #opening input file
 			totalRowCount+=1
 		data2.write(json.dumps(temp, indent = 4)) #Writing all valid rows into output file
 
-temp.sort(key=lambda row: row['Profit (in millions)'], reverse=True) #sorting to output top 20 rows with highest profit values
+temp.sort(key=lambda row: float(row['Profit (in millions)']), reverse=True) #sorting to output top 20 rows with highest profit values
 print("Total row count: " + str(totalRowCount)) 
 print("Total valid row count: " + str(validProfit))
+print("Top 20 Profit Values: ")
 while top20 < 20:
 	print(temp[top20])
 	top20+=1
